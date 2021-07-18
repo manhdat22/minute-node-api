@@ -1,17 +1,19 @@
 import { ValidationError } from 'sequelize'
 import { CustomSequelizeError } from '../exceptions/custom_sequelize_error'
 
-type ValidationMessages = { [key: string]: string[] }
+type ValidationMessages = { errors: { [key: string]: string[] } }
 
 export const validationMessages = (e: ValidationError): ValidationMessages => {
-  let errorMessages: ValidationMessages = {}
+  const errorMessages: { [key: string]: string[] } = {}
 
   e.errors.forEach((item) => {
     const originalError = item.original as CustomSequelizeError
 
-    errorMessages[originalError.field] ||= []
-    errorMessages[originalError.field].push(originalError.message)
+    if (originalError) {
+      errorMessages[originalError.field] ||= []
+      errorMessages[originalError.field].push(originalError.message)
+    }
   })
 
-  return errorMessages
+  return { errors: errorMessages }
 }

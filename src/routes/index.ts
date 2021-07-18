@@ -1,8 +1,10 @@
 import { Router } from 'express'
-import post from './post.route'
+import repository from './repository.route'
+import checklist from './checklist.route'
 
 const rootRouter = Router()
 
-rootRouter.use('/api/v1', post)
+rootRouter.use('/api/v1', repository)
+rootRouter.use('/api/v1', checklist)
 
 export default rootRouter

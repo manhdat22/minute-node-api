@@ -1,7 +1,7 @@
 {
-  "name": "minute-node-api",
+  "name": "gitgud-manager",
   "version": "1.0.0",
-  "description": "NodeJS API for \"Minute\" - Project 4",
+  "description": "NodeJS API for gitgud",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manhdat22/minute-node-api.git"
+    "url": "git+https://github.com/datlm-1340/gitgud-manager.git"
   },
   "keywords": [
     "minute"
@@ -18,9 +18,9 @@
   "author": "le.manh.dat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manhdat22/minute-node-api/issues"
+    "url": "https://github.com/datlm-1340/gitgud-manager/issues"
   },
-  "homepage": "https://github.com/manhdat22/minute-node-api#readme",
+  "homepage": "https://github.com/datlm-1340/gitgud-manager#readme",
   "devDependencies": {
     "@types/cors": "^2.8.10",
     "@types/dotenv": "^8.2.0",
@@ -28,19 +28,21 @@
     "@types/lodash": "^4.14.171",
     "@types/morgan": "^1.9.2",
     "@types/node": "^15.12.4",
-    "@types/validator": "^13.1.4",
-    "morgan": "^1.10.0",
-    "sequelize-cli": "^6.2.0"
+    "@types/validator": "^13.1.4"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
     "ts-node": "^10.0.0",
     "tslint": "^6.1.3",
     "typescript": "^4.3.4"
